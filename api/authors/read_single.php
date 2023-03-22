@@ -24,12 +24,12 @@ if (!empty($author->id)) // get author
         print_r(json_encode($author_arr)); //json make
     } else { // no id or category
         echo json_encode(
-            array('message' => 'author_id is Not Found')
+            array('message' => 'author_id Not Found')
         );
     }
 } else {
     echo json_encode(
-        array('message' => 'author_id is Not Found')
+        array('message' => 'author_id Not Found')
     );
 }
 ?>

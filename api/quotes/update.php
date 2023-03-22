@@ -33,7 +33,7 @@ if (!$data || !isset($data->quote) || !isset($data->id) || !isset($data->author_
             );
         } else {
             echo json_encode(
-                array('message' => 'No Quotes Were Found')
+                array('message' => 'No Quotes Found')
             );
         }
     } catch (PDOException $e) { //PDOException - I got suck here had to search engine it with Bing.
@@ -41,11 +41,11 @@ if (!$data || !isset($data->quote) || !isset($data->id) || !isset($data->author_
             $key_value = substr($e->getMessage(), strpos($e->getMessage(), '(') + 1, strpos($e->getMessage(), ')') - strpos($e->getMessage(), '(') - 1);
             if ($key_value === 'author_id') {
                 echo json_encode(
-                    array('message' => 'author_id is Not Found')
+                    array('message' => 'author_id Not Found')
                 );
             } else {
                 echo json_encode(
-                    array('message' => 'category_id is Not Found')
+                    array('message' => 'category_id Not Found')
                 );
             }
         }

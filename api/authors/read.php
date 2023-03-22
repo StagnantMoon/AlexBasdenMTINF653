@@ -29,7 +29,7 @@ if ($num > 0)
     echo json_encode($author_arr); //json output
 } else {
     echo json_encode(
-        array('message' => 'author_id is Not Found')
+        array('message' => 'author_id Not Found')
     );
 }//checks if authors exists
 ?>

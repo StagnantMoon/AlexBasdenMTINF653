@@ -25,12 +25,12 @@ if (!empty($category->id))
         print_r(json_encode($category_arr)); // json make
     } else {
         echo json_encode(
-            array('message' => 'category_id is Not Found')
+            array('message' => 'category_id Not Found')
         );
     }
 } else {
     echo json_encode(
-        array('message' => 'category_id is Not Found')
+        array('message' => 'category_id Not Found')
     );
 }
 ?>

@@ -13,7 +13,7 @@ $quote = new Quote($db);
 $data = json_decode(file_get_contents("php://input")); //get raw data and sets json
 
 if (!$data || !isset($data->quote) || !isset($data->author_id) || !isset($data->category_id)) {
-    echo json_encode(array('message' => 'Missing the Required Parameters'));
+    echo json_encode(array('message' => 'Missing Required Parameters'));
     exit();
 
 }
@@ -39,9 +39,9 @@ try {
     if ($e->getCode() == '23503') {
         $key_value = substr($e->getMessage(), strpos($e->getMessage(), '(') + 1, strpos($e->getMessage(), ')') - strpos($e->getMessage(), '(') - 1);
         if ($key_value === 'author_id') {
-            echo json_encode(array('message' => 'author_id is Not Found'));
+            echo json_encode(array('message' => 'author_id Not Found'));
         } else {
-            echo json_encode(array('message' => 'category_id is Not Found'));
+            echo json_encode(array('message' => 'category_id Not Found'));
         }
     }
 }

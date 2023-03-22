@@ -26,7 +26,7 @@ if (!$data || !isset($data->id))
         );
     } else {
         echo json_encode(
-            array('message' => 'category_id not found')
+            array('message' => 'category_id Not Found')
         );
     }
 } // checks if category exits if statment
